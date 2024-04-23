@@ -1,0 +1,24 @@
+{
+  "name": "kb-backend-week-2-startkit",
+  "version": "1.0.0",
+  "description": "Это стартовый архив для второй проектной работы по бэкенду.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danilka211/kb-backend-week-2-startkit.git"
+  },
+  "author": "Danilka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Danilka211/kb-backend-week-2-startkit/issues"
+  },
+  "homepage": "https://github.com/Danilka211/kb-backend-week-2-startkit#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
