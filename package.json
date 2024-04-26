@@ -1,7 +1,7 @@
 {
-  "name": "kb-backend-week-2-startkit",
+  "name": "games-rating",
   "version": "1.0.0",
-  "description": "Это стартовый архив для второй проектной работы по бэкенду.",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Danilka211/kb-backend-week-2-startkit.git"
+    "url": "git+https://github.com/Danilka211/games-rating.git"
   },
-  "author": "Danilka",
+  "author": "Danil",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Danilka211/kb-backend-week-2-startkit/issues"
+    "url": "https://github.com/Danilka211/games-rating/issues"
   },
-  "homepage": "https://github.com/Danilka211/kb-backend-week-2-startkit#readme",
+  "homepage": "https://github.com/Danilka211/games-rating#readme",
   "devDependencies": {
     "nodemon": "^3.1.0"
   }

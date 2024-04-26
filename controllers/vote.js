@@ -1,6 +1,6 @@
-const { parseBody, mimeTypes, staticFile } = require("../appModules/http-utils");
 const fs = require("fs").promises;
-const { PATH_TO_RATTING_FILE, WEIGHT, createRating, updateRating } = require("../appModules/rating");
+const { parseBody } = require("../appModules/http-utils");
+const { config, createRating, updateRating } = require("../appModules/rating");
 
 async function voteRouteController(req, res) {
   if (req.method !== "POST") {
@@ -11,13 +11,13 @@ async function voteRouteController(req, res) {
       res.statusCode = 200;
       const body = await parseBody(req);
       const data = JSON.parse(body);
-      const rating = createRating(data, WEIGHT);
+      const rating = createRating(data, config.WEIGHT);
 
-      const ratingFile = await fs.readFile(PATH_TO_RATTING_FILE);
+      const ratingFile = await fs.readFile(config.PATH_TO_RATING_FILE);
       const ratingArray = JSON.parse(ratingFile);
       const newRating = updateRating(ratingArray, data.id, rating);
-
-      await fs.writeFile(PATH_TO_RATTING_FILE, JSON.stringify(newRating));
+      
+      await fs.writeFile(config.PATH_TO_RATING_FILE, JSON.stringify(newRating));
       res.setHeader("Content-Type", "application/json");
       res.end(JSON.stringify(newRating.sort((a, b) => b.rating - a.rating)));
     } catch (error) {

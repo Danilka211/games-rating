@@ -1,9 +1,5 @@
 const fs = require("fs").promises;
 
-/**
- * path — путь к файлу
- * array — список игр
- */
 async function makeRatingFile(path, array) {
   // Читаем содержимое файла по пути path. ratingFile — строка со всем содержимым файла
   const ratingFile = await fs.readFile(path, "utf8");

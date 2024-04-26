@@ -18,4 +18,4 @@ const mimeTypes = {
     ".xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
   };
   
-  module.exports = mimeTypes;
+  module.exports = mimeTypes; 

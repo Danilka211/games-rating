@@ -1,14 +1,3 @@
-/*function parseBody(req, callback) {
-    let body = "";
-    req.on("data", (chunk) => {
-      body += chunk.toString();
-    });
-    req.on("end", () => {
-      callback(null, body);
-    });
-  }*/
-
-  
   function parseBody(req) {
     // Фукнция parseBody возвращает Promise, созданный с помощью конструктора
     return new Promise((resolve, reject) => {
@@ -28,3 +17,4 @@
   }
 
   module.exports = parseBody;
+  
